@@ -4,10 +4,16 @@ html, body {
     padding: 0;
 }
 
-#container {
-    width: 100%;
-    height: 100%;
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: var(--initial-bg-color);
+}
+
+.text-center {
+    text-align: center;
 }
 
 .cursor-pointer {
@@ -16,27 +22,6 @@ html, body {
 
 .transition-opacity {
     transition: opacity 1s ease-in-out;
-}
-
-#cookie-img.shake {
-    animation: shake 0.5s;
-}
-
-@keyframes shake {
-    0%, 100% { transform: translate(1px, 1px) rotate(0deg); }
-    10%, 90% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20%, 80% { transform: translate(-3px, 0px) rotate(1deg); }
-    30%, 50%, 70% { transform: translate(3px, 2px) rotate(0deg); }
-    40%, 60% { transform: translate(1px, -1px) rotate(1deg); }
-}
-
-#container.transition-background {
-    animation: backgroundChange 1s forwards;
-}
-
-@keyframes backgroundChange {
-    0% { background-color: var(--initial-bg-color); }
-    100% { background-color: #f0e68c; }
 }
 
 #cookie-img.shiny {
@@ -67,4 +52,13 @@ html, body {
 
 #fortune.show {
     opacity: 1;
+}
+
+#container.transition-background {
+    animation: backgroundChange 1s forwards;
+}
+
+@keyframes backgroundChange {
+    0% { background-color: var(--initial-bg-color); }
+    100% { background-color: #f0e68c; }
 }
