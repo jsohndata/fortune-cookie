@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--initial-bg-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.transition-opacity {
+    transition: opacity 1s ease-in-out;
+}
+
+#cookie-img.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(1px, 1px) rotate(0deg); }
+    10%, 90% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20%, 80% { transform: translate(-3px, 0px) rotate(1deg); }
+    30%, 50%, 70% { transform: translate(3px, 2px) rotate(0deg); }
+    40%, 60% { transform: translate(1px, -1px) rotate(1deg); }
+}
+
+#container.transition-background {
+    animation: backgroundChange 1s forwards;
+}
+
+@keyframes backgroundChange {
+    0% { background-color: var(--initial-bg-color); }
+    100% { background-color: #f0e68c; }
+}
+
+#cookie-img.shiny {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#cookie-img.crazy-animation {
+    animation: disappear 1s forwards;
+}
+
+@keyframes disappear {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+#fortune {
+    border-width: 1px;
+    border-color: red;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+#fortune.show {
+    opacity: 1;
+}
