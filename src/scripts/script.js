@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cookieImg = document.getElementById('cookie-img');
-    const fortuneContainer = document.querySelector('.fortune');
-    const fortuneMessage = document.querySelector('.fortune h2');
-    const fortuneAuthor = document.querySelector('.fortune span');
-    const fortuneImage = document.querySelector('.fortune img');
+    const cookieImg = document.querySelector('.cookie img');
+    const fortuneContainer = document.querySelector('.message');
+    const fortuneMessage = document.querySelector('.message h1');
+    const fortuneAuthor = document.querySelector('.message span');
+    const fortuneImage = document.querySelector('.message img');
     const mainContainer = document.querySelector('main');
 
     const setRandomBackgroundColor = () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await fetch('messages.json');
+            const response = await fetch('../src/data/messages.json');
             const data = await response.json();
             return data.messages;
         } catch (error) {
@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleClick = async () => {
         const messages = await fetchMessages();
         const randomMessage = getRandomMessage(messages);
-        fortuneMessage.textContent = randomMessage.message;
+        fortuneMessage.textContent = `‟${randomMessage.message}ˮ`;
         fortuneAuthor.textContent = randomMessage.author;
         fortuneImage.src = "./src/images/"+randomMessage.image;
 
         mainContainer.classList.add('transition-background');
-        cookieImg.classList.add('crazy-animation');
+        cookieImg.classList.add('disappear-animation');
 
         setTimeout(() => {
             cookieImg.style.display = 'none';
@@ -42,6 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     setRandomBackgroundColor();
-    cookieImg.classList.add('shiny');
+    cookieImg.classList.add('pulse-animation');
     cookieImg.addEventListener('click', handleClick);
 });

@@ -1,13 +1,8 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     background-color: var(--initial-bg-color);
 }
+
+body { padding-top: 5%; }
 
 .cursor-pointer {
     cursor: pointer;
@@ -17,11 +12,17 @@ html, body {
     transition: opacity 1s ease-in-out;
 }
 
-#cookie-img, .fortune {
+.cookie {
+    display: flex;
+    justify-content: center;
+}
+
+.cookie img,
+.message {
     filter: drop-shadow(2px 10px 10px #00000093);
 }
 
-#cookie-img.shiny {
+.cookie img.pulse-animation {
     animation: pulse-1 2s infinite;
 }
 
@@ -37,28 +38,98 @@ html, body {
     100% { transform: scale(1); }
 }
 
-#cookie-img.crazy-animation {
+.cookie img.disappear-animation {
     animation: disappear 1s forwards;
 }
 
 @keyframes disappear {
     0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(2.7) rotate(190deg); opacity: 0; }
+    100% { transform: scale(1.7) rotate(190deg); opacity: 0; }
 }
 
-.fortune {
-    border: 2px solid red;
+.message, 
+.message img {
+    border-radius: 0.4em;
+}
+
+.message img {
+    aspect-ratio: 1 / 1;
+    margin: 0 1em 1em 1em;
+    border-radius: 0.4em;
+    border: 3px solid rgba(0, 0, 0, 0.202);
+}
+
+.message {
+    width: 80%;
+    margin: 0 auto;
     padding: 1.5em 2.0em;
-    background-color: #f4f5f6;
-    transition: opacity 1s ease-in-out;
+    background-color: #f4f5f6;    
     opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border: 5px solid rgba(0, 0, 0, 0.075);
 }
 
-.fortune.show {
+.message.show {
     opacity: 1;
-    animation: pulse-2 4s infinite;
+    animation: pulse-2 10s infinite;
 }
 
-.fortune img {
-    width: 50%;
+.message h1,
+.message span,
+.message p {
+    color: #333;
 }
+
+.message p a {
+    text-decoration: none;
+}
+
+.message p a:hover {
+    text-decoration: underline;
+}
+
+.message span {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+    .message {
+        display: block;
+        text-align: center;
+    }
+
+    .message img {
+        width: 80%;
+    }
+ }
+
+@media (min-width: 768px) {
+    .message {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .message img {
+        width: 40%;
+    }
+ }
+
+
+#mozarts-ghost {
+    position: fixed;
+    opacity: 1;
+    bottom: 0;
+    left: 10px;
+    padding: 10px;
+  }
+  
+  #mozarts-ghost a:link,
+  #mozarts-ghost a:visited {
+    color: rgba(255, 255, 255, 0.714);
+    text-decoration: none;
+  }
+  
+  #mozarts-ghost a:hover {
+    color: rgb(195, 0, 255);
+  }

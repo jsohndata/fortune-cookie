@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
-<body>
-    <main id="container">
-        <div class="text-center">
-            <img id="cookie-img" src="unopened-cookie.png" class="cursor-pointer" alt="Fortune Cookie">
 
-            <div class="fortune">
-                <img />
-                <h2>Boo!</h2>
-                <span></span>
-                <p><a href="index.html">Start Again</a></p>
-            </div> 
-        </div>
+<body>
+    <main class="cookie">
+        <img src="./src/images/unopened-cookie.png" class="cursor-pointer" alt="Fortune Cookie">
     </main>
+
+    <section class="message">
+        <img />
+        <div>
+            <h1>Boo!</h1>
+            <p><span></span></p>
+            <p><a href="index.html">Open more cookie</a> to try again. Want to see how it's made? <a href="https://github.com/jsohndata/fortune-cookie" target="_blank">See the code in GitHub</a>.</p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p id="mozarts-ghost"><a href="https://jsohndata.github.io/no-tiempo/mozartsghost?id=20"
+            alt="Click on it and press control-shift."
+            title="Click on it and press control-shift.">π</a></p>
+    </footer>
+
     <script src="./src/scripts/script.js" type="module"></script>
 </body>
 </html>
