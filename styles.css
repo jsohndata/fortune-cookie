@@ -2,18 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.container-fluid {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-color: var(--initial-bg-color);
-}
-
-.text-center {
-    text-align: center;
 }
 
 .cursor-pointer {
@@ -24,13 +17,23 @@ html, body {
     transition: opacity 1s ease-in-out;
 }
 
-#cookie-img.shiny {
-    animation: pulse 2s infinite;
+#cookie-img, .fortune {
+    filter: drop-shadow(2px 10px 10px #00000093);
 }
 
-@keyframes pulse {
+#cookie-img.shiny {
+    animation: pulse-1 2s infinite;
+}
+
+@keyframes pulse-1 {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse-2 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
 
@@ -40,25 +43,24 @@ html, body {
 
 @keyframes disappear {
     0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(2.7) rotate(190deg); opacity: 0; }
 }
 
-#fortune {
-    border-width: 1px;
-    border-color: red;
+.fortune {
+    border: 2px solid red;
+    padding: 1.5em 2.0em;
+    background-color: #f4f5f6;
     transition: opacity 1s ease-in-out;
     opacity: 0;
 }
 
-#fortune.show {
+.fortune.show {
     opacity: 1;
+    animation: pulse-2 4s infinite;
 }
 
-#container.transition-background {
-    animation: backgroundChange 1s forwards;
+.fortune img {
+    width: 50%;
 }
 
-@keyframes backgroundChange {
-    0% { background-color: var(--initial-bg-color); }
-    100% { background-color: #f0e68c; }
-}
+

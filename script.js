@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cookieImg = document.getElementById('cookie-img');
-    const fortuneDisplay = document.getElementById('fortune');
-    const container = document.getElementById('container');
+    const fortuneContainer = document.querySelector('.fortune');
+    const fortuneMessage = document.querySelector('.fortune h2');
+    const fortuneAuthor = document.querySelector('.fortune span');
+    const fortuneImage = document.querySelector('.fortune img');
+    const mainContainer = document.querySelector('main');
 
     const setRandomBackgroundColor = () => {
         const randomColor = `#${Array.from({ length: 6 }, () => '0123456789ABCDEF'[Math.floor(Math.random() * 16)]).join('')}`;
         document.documentElement.style.setProperty('--initial-bg-color', randomColor);
-        container.style.backgroundColor = randomColor;
+        mainContainer.style.backgroundColor = randomColor;
     };
 
     const fetchMessages = async () => {
@@ -25,13 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleClick = async () => {
         const messages = await fetchMessages();
         const randomMessage = getRandomMessage(messages);
-        fortuneDisplay.textContent = randomMessage;
-        container.classList.add('transition-background');
+        fortuneMessage.textContent = randomMessage.message;
+        fortuneAuthor.textContent = randomMessage.author;
+        fortuneImage.src = "./src/images/"+randomMessage.image;
+
+        mainContainer.classList.add('transition-background');
         cookieImg.classList.add('crazy-animation');
 
         setTimeout(() => {
             cookieImg.style.display = 'none';
-            fortuneDisplay.classList.add('show');
+            fortuneContainer.classList.add('show');
         }, 1000);
     };
 

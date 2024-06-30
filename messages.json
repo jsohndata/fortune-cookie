@@ -1,9 +1,70 @@
 {
     "messages": [
-        "You will have a great day!",
-        "Something wonderful is about to happen.",
-        "You will meet someone special soon.",
-        "An unexpected event will bring you joy.",
-        "You will achieve your goals."
+        {
+            "message": "The only limit to our realization of tomorrow is our doubts of today.",
+            "author": "Franklin D. Roosevelt",
+            "image": "jsohndata_modern_illustration_of_Franklin_D._Roosevelt_44afcf67-98c5-49f1-bf29-bc07b7b7402f.png"
+        },
+        {
+            "message": "Life is what happens when you're busy making other plans.",
+            "author": "John Lennon",
+            "image": "jsohndata_moden_illustration_of_john_lenon_750b08e2-710e-40f9-b8b1-e15d137e2ee8.png"
+        },
+        {
+            "message": "Get busy living or get busy dying.",
+            "author": "Stephen King",
+            "image": "jsohndata_modern_illustration_of_Stephen_King_97fa51fc-acfe-4473-bc3c-af9d841288e4.png"
+        },
+        {
+            "message": "You only live once, but if you do it right, once is enough.",
+            "author": "Mae West",
+            "image": "jsohndata_modern_illustration_of_Mae_West_e5b4b67a-f870-4be2-91e2-58d517a3938d.png"
+        },
+        {
+            "message": "Many of life’s failures are people who did not realize how close they were to success when they gave up.",
+            "author": "Thomas A. Edison",
+            "image": "jsohndata_modern_illustration_of_Thomas_A._Edison_83273bd5-8e6d-435f-8f59-2124158892a4.png"
+        },
+        {
+            "message": "If you want to live a happy life, tie it to a goal, not to people or things.",
+            "author": "Albert Einstein",
+            "image": "jsohndata_modern_illustration_of_Albert_Einstein_a86f4917-37d2-46bf-92c4-69246d6357f2.png"
+        },
+
+        {
+            "message": "Your time is limited, don’t waste it living someone else’s life.",
+            "author": "Steve Jobs",
+            "image": "jsohndata_modern_illustration_of_steve_jobs_bd11b866-4787-4289-80fd-46f342ad75b7.png"
+        },
+        {
+            "message": "Not how long, but how well you have lived is the main thing.",
+            "author": "Seneca",
+            "image": "jsohndata_modern_illustration_of_seneca_985af0be-661d-46ad-b2c5-11d6157176c5.png"
+        },
+        {
+            "message": "Cogito, ergo sum. (I think, therefore I am.)",
+            "author": "René Descartes",
+            "image": "jsohndata_modern_illustration_of_Rene_Descartes_ae51c5aa-6734-4335-a7fe-db1a058f47f9.png"
+        },
+        {
+            "message": "The happiness of your life depends upon the quality of your thoughts.",
+            "author": "Marcus Aurelius",
+            "image": "jsohndata_modern_illustration_of_Marcus_Aurelius_7d9491ee-5ac6-4c51-98a9-9fb40de5a103.png"
+        },
+        {
+            "message": "The journey of a thousand miles begins with one step.",
+            "author": "Lao Tzu",
+            "image": "jsohndata_modern_illustration_of_lao_tzu_72057036-67e0-42f7-b3a9-c084ee8907cc.png"
+        },
+        {
+            "message": "The supreme art of war is to subdue the enemy without fighting.",
+            "author": "Sun Tzu",
+            "image": "jsohndata_modern_illustration_of_Sun_Tzu_63e647e1-bfba-4c6d-b5fb-222ef425794e.png"
+        },
+        {
+            "message": "Be the change that you wish to see in the world.",
+            "author": "Mahatma Gandhi",
+            "image": "jsohndata_modern_illustration_of_Mahatma_Gandhi_18ecd85f-4cad-4ab8-8815-db5f2cf7453b.png"
+        }
     ]
 }
