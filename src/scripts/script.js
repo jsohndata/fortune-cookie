@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await fetch('messages.json');
+            const response = await fetch('./src/data/messages.json');
             const data = await response.json();
             return data.messages;
         } catch (error) {
