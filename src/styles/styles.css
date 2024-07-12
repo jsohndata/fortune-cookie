@@ -1,20 +1,18 @@
 html, body {
     height: 100%;
     margin: 0;
-    /* background-color: var(--initial-bg-color); */
-    background: radial-gradient(circle, rgb(127, 7, 175) 0%, rgb(9, 62, 96) 100%);
+    padding: 0;
+    background: linear-gradient(40deg, rgb(127, 7, 175) 0%, rgb(9, 62, 96) 100%);    
 }
 
-.fortune-container {
+.container {
     display: flex;
-    opacity: 0.9;
-    max-width: clamp(300px, 100vw, 1000px);
+    opacity: 0.9;    
     margin: 0 auto;
-    padding: 2em;
-    flex-direction: column;
     justify-content: center; /* Horizontal center */
     align-items: center; /* Vertical center */
-    height: 100vh; /* Full viewport height */
+    height: 80vh; /* Full viewport height */
+    transition: height 0.5s ease, opacity 0.5s ease;
 }
 
 .cursor-pointer {
@@ -22,7 +20,6 @@ html, body {
 }
 
 .cookie img {
-    width: clamp(200px, 30%, 600px);
     filter: drop-shadow(2px 10px 10px #00000093);
     animation: pulse-1 2s infinite;
 }
@@ -32,23 +29,25 @@ html, body {
 }
 
 .message {
+    width: 40%;
     display: none; /* Hide message by default */
     justify-content: center;
     align-items: center;
     text-align: center;    
-    background-color: #f4f5f6;
+    
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    border: 5px solid rgba(0, 0, 0, 0.075);
-    filter: drop-shadow(2px 10px 10px #00000093);
     border-radius: 0.4em;
 }
 
 .message img {
-    /* aspect-ratio: 1 / 1;
-    margin: 0 1em 1em 1em; */
     border-radius: 0.4em;
     border: 3px solid rgba(0, 0, 0, 0.202);
+}
+
+.message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.4em;
 }
 
 .message.show {
@@ -60,7 +59,7 @@ html, body {
 .message h1,
 .message span,
 .message p {
-    color: #333;
+    color: #e6dfdf;
 }
 
 .message p a {
@@ -74,33 +73,6 @@ html, body {
 .message span {
     font-size: 1.4rem;
 }
-
-@media (max-width: 576px) {
-    /* .message {
-        display: block;
-        text-align: center;
-    } */
-
-    .message img {
-        width: 40%;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    /* .message {
-        display: flex;
-        justify-content: center;
-        text-align: left;
-    } */
-
-    .message img {
-        width: 60%;
-        margin: 2em 0;
-    }
-}
-
-
 
 
 /* Keyframes for animations */

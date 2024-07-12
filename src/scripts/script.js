@@ -1,19 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cookieImg = document.querySelector('.cookie img');
-    const fortuneContainer = document.querySelector('.message');
+    const container = document.querySelector('.container');
+    const message = document.querySelector('.message');
     const fortuneMessage = document.querySelector('.message h1');
     const fortuneAuthor = document.querySelector('.message span');
     const fortuneImage = document.querySelector('.message img');
-    const mainContainer = document.querySelector('main');
+    const cookie = document.querySelector('.cookie');
 
     // Ensure .message is hidden initially
-    fortuneContainer.style.display = 'none';
-
-    // const setRandomBackgroundColor = () => {
-    //     const randomColor = `#${Array.from({ length: 6 }, () => '0123456789ABCDEF'[Math.floor(Math.random() * 16)]).join('')}`;
-    //     document.documentElement.style.setProperty('--initial-bg-color', randomColor);
-    //     mainContainer.style.backgroundColor = randomColor;
-    // };
+    message.style.display = 'none';
 
     const fetchMessages = async () => {
         try {
@@ -33,19 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomMessage = getRandomMessage(messages);
         fortuneMessage.textContent = `‟${randomMessage.message}ˮ`;
         fortuneAuthor.textContent = randomMessage.author;
-        fortuneImage.src = "./src/images/" + randomMessage.image;
-
-        mainContainer.classList.add('transition-background');
+        fortuneImage.src = "./src/images/" + randomMessage.image;        
+        cookie.classList.add('transition-background');
         cookieImg.classList.add('disappear-animation');
 
         setTimeout(() => {
             cookieImg.style.display = 'none';
-            fortuneContainer.style.display = 'block';
-            fortuneContainer.classList.add('show');
+            message.style.display = 'block';
+            message.classList.add('show');
         }, 1000);
     };
 
-    // setRandomBackgroundColor();
     cookieImg.classList.add('pulse-animation');
     cookieImg.addEventListener('click', handleClick);
 });
