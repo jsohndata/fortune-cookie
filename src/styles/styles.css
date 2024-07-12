@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(40deg, rgb(127, 7, 175) 0%, rgb(9, 62, 96) 100%);    
+    background: linear-gradient(40deg, rgb(127, 7, 175) 0%, rgb(9, 62, 96) 100%);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
 }
 
 .container {
     display: flex;
     opacity: 0.9;    
     margin: 0 auto;
-    justify-content: center; /* Horizontal center */
-    align-items: center; /* Vertical center */
-    height: 80vh; /* Full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
     transition: height 0.5s ease, opacity 0.5s ease;
 }
 
@@ -29,18 +34,26 @@ html, body {
 }
 
 .message {
-    width: 40%;
-    display: none; /* Hide message by default */
+    width: 90%;
+    max-width: 600px;
+    display: none;
     justify-content: center;
     align-items: center;
     text-align: center;    
-    
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: 0.4em;
+    transform: scale(1);
+}
+
+.message:hover,
+.message:active {
+    transform: scale(1.3);
 }
 
 .message img {
+    width: 90%;
+    max-width: 600px;
     border-radius: 0.4em;
     border: 3px solid rgba(0, 0, 0, 0.202);
 }
@@ -48,10 +61,12 @@ html, body {
 .message h1 {
     font-size: 2.5rem;
     margin-bottom: 0.4em;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
 }
 
 .message.show {
-    display: flex; /* Show message when .show class is added */
+    display: flex;
     opacity: 1;
     animation: pulse-2 10s infinite;
 }
@@ -74,7 +89,6 @@ html, body {
     font-size: 1.4rem;
 }
 
-
 /* Keyframes for animations */
 @keyframes pulse-1 {
     0% { transform: scale(1); }
@@ -91,4 +105,14 @@ html, body {
 @keyframes disappear {
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(1.7) rotate(190deg); opacity: 0; }
+}
+
+/* Media query for mobile devices */
+@media (hover: none) {
+    .message:hover {
+        transform: scale(1);
+    }
+    .message:active {
+        transform: scale(1.3);
+    }
 }
