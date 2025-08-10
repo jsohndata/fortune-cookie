@@ -35,7 +35,7 @@ html, body {
 
 .message {
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -44,6 +44,7 @@ html, body {
     transition: all 0.3s ease-in-out;
     border-radius: 0.4em;
     transform: scale(1);
+    margin-top: 1em;
 }
 
 .message:hover,
@@ -59,7 +60,7 @@ html, body {
 }
 
 .message h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 0.4em;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
