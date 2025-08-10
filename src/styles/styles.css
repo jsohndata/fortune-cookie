@@ -21,9 +21,7 @@ html, body {
     margin-top: 100px;
 }
 
-.cursor-pointer {
-    cursor: pointer;
-}
+.cursor-pointer { cursor: pointer; }
 
 .cookie img {
     filter: drop-shadow(2px 10px 10px #00000093);
