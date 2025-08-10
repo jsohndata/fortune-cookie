@@ -1,4 +1,4 @@
-# Pulsating Circle
+# Fortune Cookie
 [![Read Me](./readme.png)](https://jsohndata.github.io/fortune-cookie/)
 🤖 AI-Assisted (ChatGPT 4o)
 
