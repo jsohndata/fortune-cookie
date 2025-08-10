@@ -54,9 +54,8 @@ html, body {
 
 .message img {
     width: 90%;
-    max-width: 600px;
     border-radius: 0.4em;
-    border: 3px solid rgba(0, 0, 0, 0.202);
+    border: 7px solid rgba(0, 0, 0, 0.202);
 }
 
 .message h1 {
